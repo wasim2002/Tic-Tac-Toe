@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tic-Tac-Toe</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <main>
-        <h1>Tic Tac Toe</h1>
-        <div class="cont">
+        <div class="gameTrack">
             <button class="box box-1"></button>
             <button class="box box-2"></button>
             <button class="box box-3"></button>
@@ -20,8 +21,28 @@
             <button class="box box-8"></button>
             <button class="box box-9"></button>
         </div>
+        <div class="stats">
+            <div class="pX stI">
+                <div class="plS SM">PLAYER (X)</div>
+                <div class="score">0</div>
+            </div>
+            <div class="tie stI">
+                <div class="tiE SM">TIE</div>
+                <div class="score">0</div>
+            </div>
+            <div class="pO stI">
+                <div class="plS SM">PLAYER (O)</div>
+                <div class="score">0</div>
+            </div>
+        </div>
+        <div class="buttons">
+            <button class="reset">Reset</button>
+            <button class="newGame">New Game</button>
+        </div>
     </main>
 
-    <script src="script.js"></script>
+    <script src="script.js
+    "></script>
 </body>
+
 </html>

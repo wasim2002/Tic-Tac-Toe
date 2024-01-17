@@ -1,55 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 html,
 body {
-  position: relative;
+  border: 1px solid black;
   min-height: 100vh;
-  background-color: #E7E5E5;
-}
-
-main > h1 {
-  font-size: 2.5rem;
-  text-align: center;
-  position: relative;
-  padding-top: 2rem;
-}
-main > h1::after {
-  content: "";
-  width: 70px;
-  height: 5px;
-  background-color: black;
-  position: absolute;
-  top: 5rem;
-  border-radius: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-.cont {
   display: flex;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  align-items: center;
+  justify-content: center;
+  background-color: #000;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+.gameTrack {
+  min-height: 19rem;
+  min-width: 24rem;
+  display: flex;
   flex-wrap: wrap;
-  width: 14rem;
-  height: 14rem;
   align-content: space-between;
   justify-content: space-between;
   background-color: #fff;
 }
 .box {
-  min-width: 70px;
-  min-height: 70px;
-  background-color: #AEE5D8;
+  width: 32%;
+  height: 6rem;
+  background-color: #000;
+  color: #fff;
+  font-size: 3rem;
+  font-weight: 500;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 10px;
-  color: #000;
-  font-size: 25px;
-  font-weight: 600;
   border: none;
+  cursor: pointer;
+}
+.stats {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+  font-size: 28px;
+  font-weight: 500;
+}
+.SM{
+  font-size: 24px;
+  font-weight: 300;
+}
+.stI {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+.buttons button{
+  font-size: 20px;
+  padding: 5px 15px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
 }
