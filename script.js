@@ -1,10 +1,11 @@
 const boxes = document.querySelectorAll(".box")
 const PlayerXScore = document.querySelector(".pX .score")
-const tieScore = document.querySelector(".tie .score")
+// const tieScore = document.querySelector(".tie .score")
 const PlayerOScore = document.querySelector(".pO .score")
+const resetBtn = document.querySelector(".reset")
+const newgameBtn = document.querySelector(".newGame")
 
 const winPattern = [[0, 1, 2], [3, 4, 5], [6, 7, 8], [0, 3, 6], [1, 4, 7], [2, 5, 8], [0, 4, 8], [2, 4, 6]]
-// let [x, tie, o] = [0, 0, 0]
 let turn = "x"
 boxes.forEach((box) => {
     box.addEventListener("click", function () {
@@ -30,12 +31,34 @@ const checkWinner = () => {
                 winner(val1)
             }
         }
+
     })
+
 }
 const winner = (winner) => {
+    boxes.forEach(box => {
+        box.disabled = true
+    })
     if (winner == "X") {
         PlayerXScore.innerHTML++
     } else {
         PlayerOScore.innerHTML++
     }
 }
+const reset = () => {
+    boxes.forEach(box => {
+        box.innerHTML = ""
+        box.disabled = false
+    })
+}
+const newGame=()=>{
+    boxes.forEach(box => {
+        box.innerHTML = ""
+        box.disabled = false
+    })
+    PlayerXScore.innerHTML="0"
+    PlayerOScore.innerHTML="0"
+    turn = "x"
+}
+newgameBtn.addEventListener("click",newGame)
+resetBtn.addEventListener("click", reset)
