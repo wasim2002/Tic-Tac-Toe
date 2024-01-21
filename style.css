@@ -24,24 +24,26 @@ main {
 .gameTrack {
   min-height: 19rem;
   min-width: 24rem;
+  background-color: #a09d9d;
   display: flex;
-  flex-wrap: wrap;
-  align-content: space-between;
+  flex-direction: column;
   justify-content: space-between;
-  background-color: #fff;
 }
-.box {
-  width: 32%;
-  height: 6rem;
+.boxes{
+  display: flex;
+  justify-content: space-between;
+}
+.box{
+  height: 6.1rem;
+  width: 7.7rem;
   background-color: #000;
+  cursor: pointer;
   color: #fff;
-  font-size: 3rem;
-  font-weight: 500;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: none;
-  cursor: pointer;
+  font-size: 2.5rem;
+  font-weight: 500;
 }
 .stats {
   color: #fff;
@@ -51,6 +53,7 @@ main {
   gap: 2.5rem;
   font-size: 28px;
   font-weight: 500;
+  user-select: none;
 }
 .SM {
   font-size: 24px;
@@ -67,6 +70,7 @@ main {
   justify-content: center;
   align-items: center;
   gap: 3rem;
+  user-select: none;
 }
 .buttons button {
   font-size: 20px;
